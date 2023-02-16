@@ -1,0 +1,56 @@
+*, *::after, *::before {
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body {
+    background-image: url(https://images.pexels.com/photos/2246476/pexels-photo-2246476.jpeg);  
+    background-size: cover; 
+    background-attachment: fixed;
+   }
+
+.scene__one {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    width: 400px;
+    height: 500px;
+    max-width: 90%;
+    position: relative;
+    border: black 3px solid;
+    border-radius: 10px;
+    background-color: aqua;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.fluidBox {
+    z-index: 1;
+    min-width: 189%;
+    min-height: 189%;
+    border-radius: 30%;
+    position: absolute;
+    background-color: white;
+    animation: fluid 5s 1s linear 1 both;
+}
+
+@keyframes fluid {
+ 0% {
+    transform: translateY(0px);
+
+ }
+
+ 100% {
+    transform: translateY(-850px) rotate(360deg);
+    
+}
+ 
+}
